@@ -1,0 +1,23 @@
+{
+  "Name": "BirdNET MQTT",
+  "Description": "Shows BirdNET detections via MQTT on Stream Deck.",
+  "Category": "BirdNET",
+  "Actions": {
+    "com.pillowfresco.birdnetmqtt.lastdetection": {
+      "Name": "BirdNET Last Detection - Circle",
+      "Tooltip": "Shows last BirdNET detection"
+    },
+    "com.pillowfresco.birdnetmqtt.image": {
+      "Name": "BirdNET Last Detection - Image",
+      "Tooltip": "Shows last BirdNET image"
+    },
+    "com.pillowfresco.birdnetmqtt.border": {
+      "Name": "BirdNET Last Detection - Meter",
+      "Tooltip": "Shows last BirdNET detection with border confidence"
+    },
+    "com.pillowfresco.birdnetmqtt.today": {
+      "Name": "BirdNET Today's Birds",
+      "Tooltip": "Rotates through birds seen today"
+    }
+  }
+}

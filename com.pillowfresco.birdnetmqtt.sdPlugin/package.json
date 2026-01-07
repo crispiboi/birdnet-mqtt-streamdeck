@@ -1,0 +1,9 @@
+{
+  "name": "birdnet-streamdeck",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "mqtt": "^5.5.0",
+    "ws": "^8.18.0"
+  }
+}

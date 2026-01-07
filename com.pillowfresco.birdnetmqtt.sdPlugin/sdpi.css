@@ -1,0 +1,51 @@
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  color: #e6e6e6;
+  background: #1f1f1f;
+  margin: 0;
+  padding: 0;
+}
+
+.sdpi-wrapper {
+  padding: 12px;
+}
+
+.sdpi-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.sdpi-item-label {
+  width: 160px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.sdpi-item-value {
+  flex: 1;
+}
+
+.sdpi-item-value input[type="text"],
+.sdpi-item-value input[type="number"],
+.sdpi-item-value input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #3a3a3a;
+  background: #2a2a2a;
+  color: #e6e6e6;
+}
+
+.sdpi-item-value input[type="checkbox"] {
+  transform: scale(1.1);
+}
+
+.sdpi-item-desc {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #b4b4b4;
+}

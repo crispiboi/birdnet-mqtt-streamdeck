@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BirdNET MQTT Settings</title>
+    <link rel="stylesheet" href="sdpi.css" />
+  </head>
+  <body>
+    <div class="sdpi-wrapper">
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"><label for="mqttHost">MQTT Host</label></div>
+        <div class="sdpi-item-value">
+          <input id="mqttHost" type="text" placeholder="mqtt://example-birdnet" />
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"><label for="mqttPort">Port</label></div>
+        <div class="sdpi-item-value">
+          <input id="mqttPort" type="number" min="1" max="65535" placeholder="1883" />
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"><label for="mqttClientId">Client ID</label></div>
+        <div class="sdpi-item-value">
+          <input id="mqttClientId" type="text" placeholder="streamdeck-birdnet" />
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"><label for="mqttTopic">Topic</label></div>
+        <div class="sdpi-item-value">
+          <input id="mqttTopic" type="text" placeholder="birdnet" />
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"><label for="mqttUsername">Username</label></div>
+        <div class="sdpi-item-value">
+          <input id="mqttUsername" type="text" />
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"><label for="mqttPassword">Password</label></div>
+        <div class="sdpi-item-value">
+          <input id="mqttPassword" type="password" />
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"><label for="mqttTls">Use TLS</label></div>
+        <div class="sdpi-item-value">
+          <input id="mqttTls" type="checkbox" />
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"><label for="payloadKey">Payload Key</label></div>
+        <div class="sdpi-item-value">
+          <input id="payloadKey" type="text" placeholder="CommonName" />
+          <div class="sdpi-item-desc">Optional JSON path</div>
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"><label for="rotationSeconds">Rotation Seconds</label></div>
+        <div class="sdpi-item-value">
+          <input id="rotationSeconds" type="number" min="1" max="60" placeholder="4" />
+          <div class="sdpi-item-desc">Today's Birds</div>
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"><label for="uncommonOccurrenceThreshold">Uncommon Threshold</label></div>
+        <div class="sdpi-item-value">
+          <input id="uncommonOccurrenceThreshold" type="number" min="0" max="1" step="0.01" placeholder="0.70" />
+          <div class="sdpi-item-desc">Occurrence between 0 and 1</div>
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"><label for="rareOccurrenceThreshold">Rare Threshold</label></div>
+        <div class="sdpi-item-value">
+          <input id="rareOccurrenceThreshold" type="number" min="0" max="1" step="0.01" placeholder="0.40" />
+          <div class="sdpi-item-desc">Occurrence between 0 and 1</div>
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"><label for="epicOccurrenceThreshold">Epic Threshold</label></div>
+        <div class="sdpi-item-value">
+          <input id="epicOccurrenceThreshold" type="number" min="0" max="1" step="0.01" placeholder="0.10" />
+          <div class="sdpi-item-desc">Occurrence between 0 and 1</div>
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"><label for="rareHoldMultiplier">Rare Hold Multiplier</label></div>
+        <div class="sdpi-item-value">
+          <input id="rareHoldMultiplier" type="number" min="1" max="10" step="0.5" placeholder="2" />
+        </div>
+      </div>
+    </div>
+
+    <script src="propertyinspector.js"></script>
+  </body>
+</html>

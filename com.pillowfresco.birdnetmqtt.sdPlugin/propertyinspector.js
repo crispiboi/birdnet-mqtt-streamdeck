@@ -13,7 +13,8 @@ const DEFAULTS = {
   epicOccurrenceThreshold: 0.1,
   rareOccurrenceThreshold: 0.4,
   uncommonOccurrenceThreshold: 0.7,
-  rareHoldMultiplier: 2
+  rareHoldMultiplier: 2,
+  debugLogging: false
 };
 
 let websocket = null;
@@ -131,6 +132,7 @@ function updateForm(settings) {
   setValue("rareOccurrenceThreshold", settings.rareOccurrenceThreshold);
   setValue("uncommonOccurrenceThreshold", settings.uncommonOccurrenceThreshold);
   setValue("rareHoldMultiplier", settings.rareHoldMultiplier);
+  setChecked("debugLogging", settings.debugLogging);
 }
 
 function setValue(id, value) {
@@ -161,7 +163,8 @@ function gatherSettings() {
     epicOccurrenceThreshold: Number(document.getElementById("epicOccurrenceThreshold").value) || DEFAULTS.epicOccurrenceThreshold,
     rareOccurrenceThreshold: Number(document.getElementById("rareOccurrenceThreshold").value) || DEFAULTS.rareOccurrenceThreshold,
     uncommonOccurrenceThreshold: Number(document.getElementById("uncommonOccurrenceThreshold").value) || DEFAULTS.uncommonOccurrenceThreshold,
-    rareHoldMultiplier: Number(document.getElementById("rareHoldMultiplier").value) || DEFAULTS.rareHoldMultiplier
+    rareHoldMultiplier: Number(document.getElementById("rareHoldMultiplier").value) || DEFAULTS.rareHoldMultiplier,
+    debugLogging: document.getElementById("debugLogging").checked
   };
 }
 
@@ -209,7 +212,8 @@ function bindInputs() {
     "epicOccurrenceThreshold",
     "rareOccurrenceThreshold",
     "uncommonOccurrenceThreshold",
-    "rareHoldMultiplier"
+    "rareHoldMultiplier",
+    "debugLogging"
   ];
 
   ids.forEach((id) => {

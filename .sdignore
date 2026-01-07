@@ -1,0 +1,7 @@
+node_modules/
+*.log
+birdnet-mqtt-cache.json
+marketplace-assets/
+*.ps1
+*.cmd
+*.bat

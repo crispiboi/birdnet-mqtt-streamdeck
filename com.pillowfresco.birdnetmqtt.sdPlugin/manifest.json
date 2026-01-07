@@ -1,85 +1,82 @@
 {
-  "Actions": [
-    {
-      "Icon": "images/actionIcon",
-      "Name": "BirdNET Last Detection - Circle",
-      "States": [
-        {
-          "Image": "images/icon",
-          "TitleAlignment": "middle",
-          "FontSize": 12
-        }
-      ],
-      "UUID": "com.pillowfresco.birdnetmqtt.lastdetection",
-      "Tooltip": "Shows last BirdNET detection",
-      "PropertyInspectorPath": "propertyinspector.html"
-    },
-    {
-      "Icon": "images/actionIcon",
-      "Name": "BirdNET Last Detection - Image",
-      "States": [
-        {
-          "Image": "images/icon",
-          "TitleAlignment": "middle",
-          "FontSize": 12
-        }
-      ],
-      "UUID": "com.pillowfresco.birdnetmqtt.image",
-      "Tooltip": "Shows last BirdNET image",
-      "PropertyInspectorPath": "propertyinspector.html"
-    },
-    {
-      "Icon": "images/actionIcon",
-      "Name": "BirdNET Last Detection - Meter",
-      "States": [
-        {
-          "Image": "images/icon",
-          "TitleAlignment": "middle",
-          "FontSize": 12
-        }
-      ],
-      "UUID": "com.pillowfresco.birdnetmqtt.border",
-      "Tooltip": "Shows last BirdNET detection with border confidence",
-      "PropertyInspectorPath": "propertyinspector.html"
-    },
-    {
-      "Icon": "images/actionIcon",
-      "Name": "BirdNET Today's Birds",
-      "States": [
-        {
-          "Image": "images/icon",
-          "TitleAlignment": "middle",
-          "FontSize": 12
-        }
-      ],
-      "UUID": "com.pillowfresco.birdnetmqtt.today",
-      "Tooltip": "Rotates through birds seen today",
-      "PropertyInspectorPath": "propertyinspector.html"
-    }
-  ],
-  "Author": "pillowfresco",
-  "UUID": "com.pillowfresco.birdnetmqtt",
-  "CodePath": "plugin.js",
-  "Description": "Stream Deck plugin that shows the last BirdNET detection via MQTT",
-  "Icon": "images/pluginIcon",
-  "Name": "BirdNET MQTT",
-  "Version": "0.1.0",
-  "Localization": {
-    "en": "locales/en.json"
-  },
-  "SDKVersion": 2,
-  "Nodejs": {
-    "Version": "20"
-  },
-  "OS": [
-    {
-      "Platform": "windows",
-      "MinimumVersion": "10"
-    }
-  ],
-  "Software": {
-    "MinimumVersion": "6.2"
-  },
-  "Category": "BirdNET",
-  "CategoryIcon": "images/categoryIcon"
+	"Actions": [
+		{
+			"Icon": "images/actionIcon",
+			"Name": "BirdNET Last Detection - Circle",
+			"States": [
+				{
+					"Image": "images/actionIcon",
+					"TitleAlignment": "middle",
+					"FontSize": 12
+				}
+			],
+			"UUID": "com.pillowfresco.birdnetmqtt.lastdetection",
+			"Tooltip": "Shows last BirdNET detection",
+			"PropertyInspectorPath": "propertyinspector.html"
+		},
+		{
+			"Icon": "images/actionIcon",
+			"Name": "BirdNET Last Detection - Image",
+			"States": [
+				{
+					"Image": "images/actionIcon",
+					"TitleAlignment": "middle",
+					"FontSize": 12
+				}
+			],
+			"UUID": "com.pillowfresco.birdnetmqtt.image",
+			"Tooltip": "Shows last BirdNET image",
+			"PropertyInspectorPath": "propertyinspector.html"
+		},
+		{
+			"Icon": "images/actionIcon",
+			"Name": "BirdNET Last Detection - Meter",
+			"States": [
+				{
+					"Image": "images/actionIcon",
+					"TitleAlignment": "middle",
+					"FontSize": 12
+				}
+			],
+			"UUID": "com.pillowfresco.birdnetmqtt.border",
+			"Tooltip": "Shows last BirdNET detection with border confidence",
+			"PropertyInspectorPath": "propertyinspector.html"
+		},
+		{
+			"Icon": "images/actionIcon",
+			"Name": "BirdNET Today's Birds",
+			"States": [
+				{
+					"Image": "images/actionIcon",
+					"TitleAlignment": "middle",
+					"FontSize": 12
+				}
+			],
+			"UUID": "com.pillowfresco.birdnetmqtt.today",
+			"Tooltip": "Rotates through birds seen today",
+			"PropertyInspectorPath": "propertyinspector.html"
+		}
+	],
+	"Author": "pillowfresco",
+	"UUID": "com.pillowfresco.birdnetmqtt",
+	"CodePath": "plugin.js",
+	"Description": "Stream Deck plugin that shows the last BirdNET detection via MQTT",
+	"Icon": "images/pluginIcon",
+	"Name": "BirdNET MQTT",
+	"Version": "0.1.0.0",
+	"SDKVersion": 2,
+	"Nodejs": {
+		"Version": "20"
+	},
+	"OS": [
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Software": {
+		"MinimumVersion": "7.0"
+	},
+	"Category": "BirdNET MQTT",
+	"CategoryIcon": "images/categoryIcon"
 }

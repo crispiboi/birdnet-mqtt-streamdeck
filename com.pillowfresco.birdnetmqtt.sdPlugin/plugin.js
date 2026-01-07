@@ -22,7 +22,8 @@ const DEFAULTS = {
   epicOccurrenceThreshold: 0.1,
   rareOccurrenceThreshold: 0.4,
   uncommonOccurrenceThreshold: 0.7,
-  rareHoldMultiplier: 2
+  rareHoldMultiplier: 2,
+  debugLogging: false
 };
 
 let websocket = null;
@@ -45,8 +46,12 @@ const logFile = path.join(__dirname, "birdnet-mqtt-plugin.log");
 const pendingLogs = [];
 const cacheFile = path.join(__dirname, "birdnet-mqtt-cache.json");
 let cacheSaveTimer = null;
+let debugEnabled = DEFAULTS.debugLogging;
 
 function logLine(message) {
+  if (!debugEnabled) {
+    return;
+  }
   const ts = new Date().toISOString();
   const line = `[birdnet-mqtt] ${ts} ${message}`;
   try {
@@ -185,6 +190,7 @@ function connectElgatoStreamDeckSocket(inPort, inUUID, inRegisterEvent, inInfo, 
 
     if (message.event === "didReceiveSettings") {
       settings = { ...DEFAULTS, ...globalSettings, ...(message.payload.settings || {}) };
+      debugEnabled = Boolean(settings.debugLogging);
       logLine(`didReceiveSettings ${JSON.stringify(settings)}`);
       restartMqtt();
     }
@@ -193,6 +199,7 @@ function connectElgatoStreamDeckSocket(inPort, inUUID, inRegisterEvent, inInfo, 
       globalSettings = { ...DEFAULTS, ...(message.payload.settings || {}) };
       globalSettingsLoaded = true;
       settings = { ...DEFAULTS, ...globalSettings, ...(message.payload.settings || {}) };
+      debugEnabled = Boolean(settings.debugLogging);
       logLine(`didReceiveGlobalSettings ${JSON.stringify(globalSettings)}`);
       restartMqtt();
     }
@@ -203,6 +210,7 @@ function connectElgatoStreamDeckSocket(inPort, inUUID, inRegisterEvent, inInfo, 
         contexts.set(message.context, message.action);
       }
       settings = { ...DEFAULTS, ...globalSettings, ...(message.payload.settings || {}) };
+      debugEnabled = Boolean(settings.debugLogging);
       logLine(`willAppear ${JSON.stringify(settings)}`);
       restartMqtt();
       if (!globalSettingsLoaded) {
@@ -243,6 +251,7 @@ function connectElgatoStreamDeckSocket(inPort, inUUID, inRegisterEvent, inInfo, 
       actionContext = message.context || actionContext;
       if (message.payload && message.payload.settings) {
         settings = { ...DEFAULTS, ...(message.payload.settings || {}) };
+        debugEnabled = Boolean(settings.debugLogging);
         logLine(`sendToPlugin ${JSON.stringify(settings)}`);
         saveSettings();
         restartMqtt();

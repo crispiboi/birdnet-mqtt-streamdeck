@@ -1,0 +1,4 @@
+BirdNET icon:
+  Source: https://github.com/tphakala/birdnet-go/blob/main/assets/images/apple-touch-icon.png
+  Project: BirdNET-Go (open source)
+  Use: Resized for plugin, action, and category icons.

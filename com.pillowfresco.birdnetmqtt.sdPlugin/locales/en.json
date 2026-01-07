@@ -1,7 +1,7 @@
 {
   "Name": "BirdNET MQTT",
   "Description": "Shows BirdNET detections via MQTT on Stream Deck.",
-  "Category": "BirdNET",
+  "Category": "BirdNET MQTT",
   "Actions": {
     "com.pillowfresco.birdnetmqtt.lastdetection": {
       "Name": "BirdNET Last Detection - Circle",

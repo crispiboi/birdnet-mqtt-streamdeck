@@ -12,6 +12,12 @@ On information tiles (circle, meter, today's birds), there is a glyph in the bot
 - Yellow Diamond = Rare
 - Purple Star = Epic
 
+## MQTT setup
+
+In BirdNET-Go, enable MQTT in `Settings - Integrations - MQTT`. Configure the broker as:
+`mqtt://<your-domain-or-ip>:1883`
+and set a username, password, and retain messages. Use those same values in the Stream Deck plugin settings.
+
 ## Screenshots
 
 ![BirdNET tiles example](assets/streamdeck-example-1.png)
